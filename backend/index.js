@@ -75,7 +75,7 @@ async function main() {
   app.post("/pontuacoes", async function (req, res) {
     // Peguei o item do corpo da requisição
     const item = req.body;
-    // console.log(item);
+     console.log(item);
 
     Adicionar o item na lista
      lista.push({
