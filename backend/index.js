@@ -42,23 +42,23 @@ async function main() {
   // Nosso backend armazena as pontuações das jogadas
   // Criar a lista com as pontuações
 
-   const lista = [
-     {
-       id: 1,
-       nome: "Paulo",
-       pontos: 21,
-     },
-     {
-       id: 2,
-       nome: "Daniel",
-       pontos: 52,
-     },
-     {
-       id: 3,
-       nome: "Beatriz",
-       pontos: 97,
-     },
-   ];
+    const lista = [
+      {
+        id: 1,
+        nome: "Paulo",
+        pontos: 21,
+      },
+      {
+        id: 2,
+        nome: "Daniel",
+        pontos: 52,
+      },
+      {
+        id: 3,
+        nome: "Beatriz",
+        pontos: 97,
+      },
+    ];
 
   // Endpoint READ ALL - [GET] /pontuacoes
   app.get("/pontuacoes", async function (req, res) {
@@ -77,12 +77,12 @@ async function main() {
     const item = req.body;
     // console.log(item);
 
-    // Adicionar o item na lista
-    // lista.push({
-    //   id: lista.length + 1,
-    //   nome: item.nome,
-    //   pontos: item.pontos,
-    // });
+    Adicionar o item na lista
+     lista.push({
+       id: lista.length + 1,
+       nome: item.nome,
+       pontos: item.pontos,
+     });
 
     await collection.insertOne(item);
 
